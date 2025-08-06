@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using AlienTorpedoV3.Models;
+using WebAPI.Models;
 
-namespace AlienTorpedoV3.Controllers
+namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -23,7 +23,7 @@ namespace AlienTorpedoV3.Controllers
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(CreateUser), new { userId = user.Id }, user);
+            return CreatedAtAction(nameof(CreateUser), new { userId = user.IdUser }, user);
         }
     }
 }

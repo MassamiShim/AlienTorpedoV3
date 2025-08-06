@@ -1,12 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace AlienTorpedoV3.Models
+namespace WebAPI.Models
 {
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<GroupEvent> GroupEvents { get; set; }
+        public DbSet<GroupMember> GroupMembers { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<EventType> EventTypes { get; set; }
+
     }
 }
